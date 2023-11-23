@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject1.controllers.VentasController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Pane prefHeight="428.0" prefWidth="600.0" style="-fx-background-color: #34E9E9;">
+               <children>
+                  <Label layoutX="200.0" layoutY="14.0" text="VENTA DE PRODUCTO">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="56.0" text="Nombre del Producto :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="151.0" text="Cantidad a Comprar (Stock) :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="14.0" layoutY="90.0" prefHeight="38.0" prefWidth="553.0" />
+                  <TextField layoutX="14.0" layoutY="188.0" prefHeight="38.0" prefWidth="553.0" />
+                  <Button fx:id="guardarButton" layoutX="306.0" layoutY="261.0" mnemonicParsing="false" onAction="#actionBtnGuardar" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #69E563;" text="GUARDAR" />
+                  <Button fx:id="btnCancelar" layoutX="464.0" layoutY="261.0" mnemonicParsing="false" onAction="#actionBtnCancelar" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #E93434;" text="CANCELAR" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

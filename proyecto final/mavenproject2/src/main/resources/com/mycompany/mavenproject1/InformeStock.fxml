@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject1.controllers.InformeStockController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="851.0" prefWidth="801.0">
+         <children>
+            <HBox layoutX="-2.0" layoutY="-4.0" prefHeight="51.0" prefWidth="807.0">
+               <children>
+                  <Label prefHeight="51.0" prefWidth="815.0" style="-fx-background-color: #34E9E9;" text="INFORME STOCK">
+                     <font>
+                        <Font name="Arial Black" size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets left="280.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutY="43.0" prefHeight="808.0" prefWidth="805.0">
+               <children>
+                  <Pane prefHeight="808.0" prefWidth="832.0" style="-fx-background-color: #34E9E9;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Ingrsese producto a buscar :">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="buscarproducto" layoutX="14.0" layoutY="49.0" prefHeight="38.0" prefWidth="423.0" />
+                        <TableView fx:id="tablavista" layoutX="46.0" layoutY="122.0" prefHeight="632.0" prefWidth="709.0">
+                           <columns>
+                              <TableColumn fx:id="productoColumn1" prefWidth="121.0" text="Producto" />
+                              <TableColumn fx:id="grupoColumn" prefWidth="120.0" text="Grupo" />
+                              <TableColumn fx:id="stockColumn" prefWidth="60.0" text="Stock" />
+                              <TableColumn fx:id="fechaCaducidadColumn" prefWidth="136.0" text="Fecha de  caducidad" />
+                              <TableColumn prefWidth="133.0" text="Proveedor" />
+                              <TableColumn fx:id="fechaAgregacionColumn" prefWidth="138.0" text="Fecha de agregacion" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

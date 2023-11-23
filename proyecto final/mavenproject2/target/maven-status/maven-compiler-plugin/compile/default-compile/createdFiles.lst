@@ -1,0 +1,16 @@
+com\mycompany\mavenproject1\utility\Utility.class
+com\mycompany\mavenproject1\entidades\Producto.class
+com\mycompany\mavenproject1\App.class
+com\mycompany\mavenproject1\datos\TablaP.class
+com\mycompany\mavenproject1\entidades\Usuario.class
+com\mycompany\mavenproject1\logica\Login.class
+com\mycompany\mavenproject1\controllers\StockInformeController.class
+com\mycompany\mavenproject1\controllers\IngresarProductoController.class
+com\mycompany\mavenproject1\controllers\InformeStockController.class
+com\mycompany\mavenproject1\controllers\LoginController.class
+com\mycompany\mavenproject1\persistencia\IProducto.class
+com\mycompany\mavenproject1\controllers\VentasController.class
+com\mycompany\mavenproject1\entidades\ProductoConcreto.class
+com\mycompany\mavenproject1\logica\LgRegistro.class
+com\mycompany\mavenproject1\persistencia\ArchivoTxtProducto.class
+com\mycompany\mavenproject1\controllers\PrincipalController.class

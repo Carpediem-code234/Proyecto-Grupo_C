@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="mavenproject2">
+  <ClassDiagramComponents>
+    <Class name="App" package="com.mycompany.mavenproject1" visibility="public" xPosition="2293.0" yPosition="1344.0">
+      <Fields>
+        <Field name="scene" type="Scene" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="setRoot" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="fxml"/>
+        </Method>
+        <Method name="newStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="fxml"/>
+          <Argument type="boolean" name="modo"/>
+          <Argument type="int" name="w"/>
+          <Argument type="int" name="h"/>
+        </Method>
+        <Method name="loadFXML" returnType="Parent" visibility="public" isStatic="true">
+          <Argument type="String" name="fxml"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InformeStockController" package="com.mycompany.mavenproject1.controllers" visibility="public" xPosition="2131.0" yPosition="1122.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="IngresarProductoController" package="com.mycompany.mavenproject1.controllers" visibility="public" xPosition="1550.0" yPosition="899.0">
+      <Fields>
+        <Field name="productoTextField" type="TextField" visibility="private"/>
+        <Field name="grupoAlimenticioComboBox" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="stockTextField" type="TextField" visibility="private"/>
+        <Field name="fechaCaducidadDatePicker" type="DatePicker" visibility="private"/>
+        <Field name="fechaAgregacionDatePicker" type="DatePicker" visibility="private"/>
+        <Field name="proveedorTextField" type="TextField" visibility="private"/>
+        <Field name="guardarButton" type="Button" visibility="private"/>
+        <Field name="eliminarButton" type="Button" visibility="private"/>
+        <Field name="modificarButton" type="Button" visibility="private"/>
+        <Field name="tablavista" type="TableView&lt;Producto&gt;" visibility="private"/>
+        <Field name="productoColumn" type="TableColumn&lt;Producto, String&gt;" visibility="private"/>
+        <Field name="grupoColumn" type="TableColumn&lt;Producto, String&gt;" visibility="private"/>
+        <Field name="stockColumn" type="TableColumn&lt;Producto, Integer&gt;" visibility="private"/>
+        <Field name="fechaCaducidadColumn" type="TableColumn&lt;Producto, String&gt;" visibility="private"/>
+        <Field name="proveedorColumn" type="TableColumn&lt;Producto, String&gt;" visibility="private"/>
+        <Field name="fechaAgregacionColumn" type="TableColumn&lt;Producto, String&gt;" visibility="private"/>
+        <Field name="productosList" type="ObservableList&lt;Producto&gt;" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="configurarColumnasTabla" returnType="void" visibility="private"/>
+        <Method name="configurarComboBox" returnType="void" visibility="private"/>
+        <Method name="configurarTabla" returnType="void" visibility="private"/>
+        <Method name="deshabilitarModificarSinSeleccion" returnType="void" visibility="private"/>
+        <Method name="clickguardar" returnType="void" visibility="public"/>
+        <Method name="clickeliminar" returnType="void" visibility="public"/>
+        <Method name="clickmodificar" returnType="void" visibility="public"/>
+        <Method name="limpiarCampos" returnType="void" visibility="private"/>
+        <Method name="validarEntrada" returnType="void" visibility="private"/>
+        <Method name="esNumeroValido" returnType="boolean" visibility="private">
+          <Argument type="String" name="str"/>
+        </Method>
+        <Method name="mostrarAlerta" returnType="void" visibility="private">
+          <Argument type="String" name="titulo"/>
+          <Argument type="String" name="mensaje"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LoginController" package="com.mycompany.mavenproject1.controllers" visibility="public" xPosition="999.0" yPosition="100.0">
+      <Fields>
+        <Field name="txtUsername" type="TextField" visibility="private"/>
+        <Field name="txtPassword" type="PasswordField" visibility="private"/>
+        <Field name="bntlogin" type="Button" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="clickLogin" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PrincipalController" package="com.mycompany.mavenproject1.controllers" visibility="public" xPosition="109.0" yPosition="1150.0">
+      <Fields>
+        <Field name="btncompra" type="Button" visibility="private"/>
+        <Field name="btnStock" type="Button" visibility="private"/>
+        <Field name="btnventa" type="Button" visibility="private"/>
+        <Field name="panelOpciones" type="StackPane" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="eventActionBtnRegistroP" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="eventActionBtnConsultaStock" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="eventActionBtnRegistrarVenta" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StockInformeController" package="com.mycompany.mavenproject1.controllers" visibility="public" xPosition="2348.0" yPosition="852.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VentasController" package="com.mycompany.mavenproject1.controllers" visibility="public" xPosition="794.0" yPosition="721.0">
+      <Fields>
+        <Field name="guardarButton" type="Button" visibility="private"/>
+        <Field name="btnCancelar" type="Button" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="actionBtnGuardar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="actionBtnCancelar" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TablaP" package="com.mycompany.mavenproject1.datos" visibility="public" xPosition="149.0" yPosition="686.0">
+      <Fields>
+        <Field name="Producto" type="SimpleStringProperty" visibility="private" isFinal="true"/>
+        <Field name="Grupo" type="SimpleStringProperty" visibility="private" isFinal="true"/>
+        <Field name="Stock" type="SimpleIntegerProperty" visibility="private" isFinal="true"/>
+        <Field name="FechaC" type="SimpleStringProperty" visibility="private" isFinal="true"/>
+        <Field name="Proveedor" type="SimpleStringProperty" visibility="private" isFinal="true"/>
+        <Field name="FechaG" type="SimpleStringProperty" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="Producto"/>
+          <Argument type="String" name="Grupo"/>
+          <Argument type="int" name="Stock"/>
+          <Argument type="String" name="FechaC"/>
+          <Argument type="String" name="Proveedor"/>
+          <Argument type="String" name="FechaG"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getProducto" returnType="String" visibility="public"/>
+        <Method name="getGrupo" returnType="String" visibility="public"/>
+        <Method name="getStock" returnType="int" visibility="public"/>
+        <Method name="getFechaC" returnType="String" visibility="public"/>
+        <Method name="getProveedor" returnType="String" visibility="public"/>
+        <Method name="getFechaG" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Producto" package="com.mycompany.mavenproject1.entidades" visibility="public" isAbstract="true" xPosition="1344.0" yPosition="168.0">
+      <Fields>
+        <Field name="Producto" type="String" visibility="private"/>
+        <Field name="Grupo" type="String" visibility="private"/>
+        <Field name="Stock" type="int" visibility="private"/>
+        <Field name="FechaCaducidad" type="LocalDate" visibility="private"/>
+        <Field name="Proveedor" type="String" visibility="private"/>
+        <Field name="FechaAgregacion" type="LocalDate" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="Producto"/>
+          <Argument type="String" name="Grupo"/>
+          <Argument type="int" name="Stock"/>
+          <Argument type="LocalDate" name="FechaCaducidad"/>
+          <Argument type="String" name="Proveedor"/>
+          <Argument type="LocalDate" name="FechaAgregacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="clonar" returnType="Producto" visibility="public" isAbstract="true"/>
+        <Method name="getProducto" returnType="String" visibility="public"/>
+        <Method name="setProducto" returnType="void" visibility="public">
+          <Argument type="String" name="Producto"/>
+        </Method>
+        <Method name="getGrupo" returnType="String" visibility="public"/>
+        <Method name="setGrupo" returnType="void" visibility="public">
+          <Argument type="String" name="Grupo"/>
+        </Method>
+        <Method name="getStock" returnType="int" visibility="public"/>
+        <Method name="setStock" returnType="void" visibility="public">
+          <Argument type="int" name="Stock"/>
+        </Method>
+        <Method name="getFechaCaducidad" returnType="LocalDate" visibility="public"/>
+        <Method name="setFechaCaducidad" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="FechaCaducidad"/>
+        </Method>
+        <Method name="getProveedor" returnType="String" visibility="public"/>
+        <Method name="setProveedor" returnType="void" visibility="public">
+          <Argument type="String" name="Proveedor"/>
+        </Method>
+        <Method name="getFechaAgregacion" returnType="LocalDate" visibility="public"/>
+        <Method name="setFechaAgregacion" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="FechaAgregacion"/>
+        </Method>
+        <Method name="getDataFromFileTxt" returnType="String" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="ProductoConcreto" package="com.mycompany.mavenproject1.entidades" visibility="public" xPosition="496.0" yPosition="442.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="Producto"/>
+          <Argument type="String" name="Grupo"/>
+          <Argument type="int" name="Stock"/>
+          <Argument type="LocalDate" name="FechaCaducidad"/>
+          <Argument type="String" name="Proveedor"/>
+          <Argument type="LocalDate" name="FechaAgregacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDataFromFileTxt" returnType="String" visibility="public"/>
+        <Method name="clonar" returnType="com.mycompany.mavenproject1.entidades.Producto" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Usuario" package="com.mycompany.mavenproject1.entidades" visibility="public" xPosition="598.0" yPosition="1344.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="getUsername" returnType="String" visibility="public"/>
+        <Method name="setUsername" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LgRegistro" package="com.mycompany.mavenproject1.logica" visibility="public" xPosition="1009.0" yPosition="1122.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Login" package="com.mycompany.mavenproject1.logica" visibility="public" xPosition="1085.0" yPosition="1404.0">
+      <Fields>
+        <Field name="usuario" type="Usuario" visibility="private" isStatic="true"/>
+        <Field name="usuarioLogeado" type="Usuario" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="validarLogin" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="setUsuarioLogeado" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="getUsuarioLogeado" returnType="Usuario" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="ArchivoTxtProducto" package="com.mycompany.mavenproject1.persistencia" visibility="public" xPosition="2397.0" yPosition="117.0">
+      <Fields>
+        <Field name="archivo" type="File" visibility="private"/>
+        <Field name="archivoEscritura" type="FileWriter" visibility="private"/>
+        <Field name="archivoLectura" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nameFile"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="adicionarProducto" returnType="void" visibility="public">
+          <Argument type="Producto" name="p"/>
+        </Method>
+        <Method name="leerFromFile" returnType="Producto" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="obtenerProductos" returnType="ArrayList&lt;Producto&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Utility" package="com.mycompany.mavenproject1.utility" visibility="public" xPosition="2284.0" yPosition="499.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="notificarMensaje" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="titulo"/>
+          <Argument type="String" name="msg"/>
+          <Argument type="AlertType" name="tipo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="IProducto" package="com.mycompany.mavenproject1.persistencia" visibility="public" xPosition="1598.0" yPosition="7.0">
+      <Methods>
+        <Method name="adicionarProducto" returnType="void" visibility="package">
+          <Argument type="Producto" name="p"/>
+        </Method>
+        <Method name="obtenerProductos" returnType="ArrayList&lt;Producto&gt;" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.mycompany.mavenproject1.persistencia.ArchivoTxtProducto" target="com.mycompany.mavenproject1.entidades.Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fechaCaducidadColumn" source="com.mycompany.mavenproject1.controllers.IngresarProductoController" target="com.mycompany.mavenproject1.entidades.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="productosList" source="com.mycompany.mavenproject1.controllers.IngresarProductoController" target="com.mycompany.mavenproject1.entidades.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ObservableList&lt;Producto&gt;"/>
+    <HasRelation name="fechaAgregacionColumn" source="com.mycompany.mavenproject1.controllers.IngresarProductoController" target="com.mycompany.mavenproject1.entidades.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.mavenproject1.logica.Login" target="com.mycompany.mavenproject1.entidades.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.mycompany.mavenproject1.entidades.ProductoConcreto" target="com.mycompany.mavenproject1.entidades.Producto"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.mycompany.mavenproject1.persistencia.ArchivoTxtProducto" target="com.mycompany.mavenproject1.persistencia.IProducto"/>
+    <HasRelation name="stockColumn" source="com.mycompany.mavenproject1.controllers.IngresarProductoController" target="com.mycompany.mavenproject1.entidades.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.mavenproject1.persistencia.IProducto" target="com.mycompany.mavenproject1.entidades.Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="grupoColumn" source="com.mycompany.mavenproject1.controllers.IngresarProductoController" target="com.mycompany.mavenproject1.entidades.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="productoColumn" source="com.mycompany.mavenproject1.controllers.IngresarProductoController" target="com.mycompany.mavenproject1.entidades.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuarioLogeado" source="com.mycompany.mavenproject1.logica.Login" target="com.mycompany.mavenproject1.entidades.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tablavista" source="com.mycompany.mavenproject1.controllers.IngresarProductoController" target="com.mycompany.mavenproject1.entidades.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="proveedorColumn" source="com.mycompany.mavenproject1.controllers.IngresarProductoController" target="com.mycompany.mavenproject1.entidades.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.mavenproject1.entidades.ProductoConcreto" target="com.mycompany.mavenproject1.entidades.Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuario" source="com.mycompany.mavenproject1.logica.Login" target="com.mycompany.mavenproject1.entidades.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.mavenproject1.entidades.Producto" target="com.mycompany.mavenproject1.entidades.Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
